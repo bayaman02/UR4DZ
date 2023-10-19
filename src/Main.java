@@ -5,37 +5,35 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-ArrayList<String> listA = new ArrayList<>();
-ArrayList<String> listB = new ArrayList<>();
-ArrayList<String> listC = new ArrayList<>();
+        ArrayList<String> listA = new ArrayList<>();
+        ArrayList<String> listB = new ArrayList<>();
+        ArrayList<String> listC = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         String a;
-        for (int i = 0; i <5 ; i++) {
+        for (int i = 0; i < 5; i++) {
             a = scanner.nextLine();
             listA.add(a);
 
         }
         System.out.println(listA);
         for (int i = 0; i < 5; i++) {
-            a=scanner.nextLine();
+            a = scanner.nextLine();
             listB.add(a);
         }
         System.out.println(listB);
         Collections.reverse(listB);
         System.out.println(listB);
-        int num= 1;
-        for (int i = 0; i <listA.size() ; i++) {
-            listC.addAll(i,Collections.singleton(listA.get(i)));
+        int num = 1;
+        for (int i = 0; i < listA.size(); i++) {
+            listC.addAll(i, Collections.singleton(listA.get(i)));
         }
         for (int j = 0; j < listB.size(); j++) {
-            listC.addAll(num,Collections.singleton(listB.get(j)));
+            listC.addAll(num, Collections.singleton(listB.get(j)));
             num += 2;
         }
         System.out.println(listC);
         listC.sort(Comparator.comparing(String::length));
         System.out.println(listC);
-
-
 
 
     }
@@ -72,7 +70,7 @@ ArrayList<String> listC = new ArrayList<>();
 
 
 
-  ArrayList<String> names = new ArrayList<>();
+  /*ArrayList<String> names = new ArrayList<>();
         names.add("Allan");
                 names.add("Ali");
                 names.add("Amir");
@@ -133,5 +131,6 @@ ArrayList<String> listC = new ArrayList<>();
         mens.sort(Comparator.comparing(Men::getAge));
 
         System.out.println(mens);
+
 
    */
